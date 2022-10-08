@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="h-100" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Neyveli Marathon">
+  <title>Neyveli Marathon </title>
+  <base href="/">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js" type="text/javascript"></script>
+  <script src="js/angular-ui-router.min.js" type="text/javascript"></script>
+</head>
+
+<body ng-controller="selectedPageCtrl" ng-cloak>
+
+  <div class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light page-wrapper nit-nav">
+      <a class="navbar-brand" href="index.html">
+        <span class="logo-wrapper"><img src="images/neyveli-marathon.svg" class="logo" alt="Neyveli Marathon" /></span>
+        <span class="logo-text-wrapper">
+          <span class="logo-text">Neyveli</span>
+          <span class="caption">Marathon</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText" ng-controller="NavigationCtrl">
+        <ul class="navbar-nav mr-auto">
+          <!--loop-->
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse" ui-sref-active="active" ng-repeat="item in pageConfig | orderBy: 'sequence'">
+            <span ng-if="!item.url">
+                <a class="nav-link" ui-sref="home">{{item.name}} <span class="sr-only">(current)</span></a>
+            </span>
+            <span ng-if="item.url">
+              <a class="nav-link" ui-sref="page({selectedpage: '{{item.url}}'})">{{item.name}}</a>
+            </span>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <span><img src="images/icons/telephone-fill.svg" class="" alt="contact us" /></span> +91 999 444
+          22222
+        </span>
+      </div>
+    </nav>
+    <main class="flex-fill main-container page-wrapper">
+      <div class="container-fluid">
+
+      <div ui-view></div>
+
+      </div>
+    </main>
+
+
+    <footer class="nit-dark-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h5>Address</h5>
+            <p>No XXX, 1st floor, Pappankulam, Villupuram, <br /> Tamilnadu, India. Pincode: 605602</p>
+          </div>
+          <div class="col-sm">
+            <h5>Contact Us</h5>
+            <p>+91 988 332 3333 <br /> sales@xxxxinfotech.com </p>
+          </div>
+          <div class="col-sm">
+            <h5>Connect Us</h5>
+            <p>+91 988 332 3333 <br /> sales@xxxxinfotech.com </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mlr-remove copy-right-text">
+        <div class="col-sm">
+          <p class="text-center">
+            <span>Copyright &copy; 2022 Neyveli Marathon</span>
+          </p>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+
+  <script src="js/page.config.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+body {
+  background-color: #f9f9f9;
+}
+.logo-wrapper, .logo-text-wrapper {
+  float: left;
+  display: block;
+} 
+.logo-text-wrapper {
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  position: relative;
+  top: 6px;
+}
+.logo-text-wrapper .logo-text {
+  font-weight: 800;
+  display: block;
+  border-bottom: 2px solid #e2a415;
+}
+.logo-text-wrapper .caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+}
+.nit-nav {
+  border-top: 5px solid #28ca8e;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 50px;
+}
+
+.nit-nav .nav-item {
+  padding: 0px 15px;
+}
+
+.nit-nav .nav-item.active {
+  background-color: #28ca8e;
+}
+
+.nit-nav .nav-item.active .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-brand {
+  margin-right: 5%;
+}
+
+.navbar-brand img {
+  width: 40px;
+  margin-top: -5px;
+}
+
+.main-container {
+  margin: 60px 0px 25px 0px;
+}
+
+.nit-dark-bg {
+  background-color: #24201f;
+}
+
+.page-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+footer h5 {
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, .card-title {
+  color: #24201f;
+}
+
+p, .card-text {
+  color: #8c9292;
+}
+
+footer p {
+  color: #d6d6d6;
+  font-size: 0.8rem;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #28ca8e;
+  border-color: #28ca8e;
+}
+
+.btn-primary:hover {
+  background-color: #51e2ac;
+  border-color: #51e2ac;
+}
+
+.card {
+  border-color: #f9f9f9;
+}
+
+.mlr-remove {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.nit-card img {
+  height: 200px;
+}
+.footer-text {
+  position: relative;
+}
+.footer-text p {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.services-banner {
+  background-color: #092c54;
+  width: 100%;
+}
+.copy-right-text {
+  border-top: 1px solid #353232;
+  padding-top: 15px;
+}
+
+.bg-color-product {
+  background-color:#23610f;
+  width: 100%;
+}
+.coming-soon {
+  color: #ffffff;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 200px;
+}
